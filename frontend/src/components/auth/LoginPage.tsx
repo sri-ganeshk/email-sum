@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import { backendClient } from "../../api/backendClient";
 
 export default function LoginPage() {
@@ -70,6 +70,12 @@ export default function LoginPage() {
         <p className="mt-6 text-xs text-gray-400">
           This app reads your Gmail and Google Calendar with your permission.
           Your data is never stored or shared.
+        </p>
+
+        <p className="mt-3 text-xs text-gray-400">
+          <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
+          {" · "}
+          <Link to="/terms" className="hover:underline">Terms of Service</Link>
         </p>
       </div>
     </div>

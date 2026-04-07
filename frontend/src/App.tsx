@@ -8,6 +8,7 @@ import Callback from "./pages/Callback";
 import Inbox from "./pages/Inbox";
 import EmailPage from "./pages/EmailPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import { ToastContainer } from "./components/common/Toast";
 
 const queryClient = new QueryClient({
@@ -67,6 +68,8 @@ export default function App() {
                 </ProtectedRoute>
               }
             />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
           </Routes>
           <ToastContainer />
         </AuthGate>

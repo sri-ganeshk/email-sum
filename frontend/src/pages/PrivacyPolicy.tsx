@@ -91,8 +91,8 @@ export default function PrivacyPolicy() {
           <h2 className="text-xl font-semibold text-gray-900 mb-3">7. Contact</h2>
           <p className="text-gray-700">
             If you have any questions about this Privacy Policy, please contact us at{" "}
-            <a href="mailto:sriganeshk2025@gmail.com" className="text-blue-600 hover:underline">
-              sriganeshk2025@gmail.com
+            <a href="mailto:ganeshknsml@gmail.com" className="text-blue-600 hover:underline">
+              ganeshknsml@gmail.com
             </a>
             .
           </p>
