@@ -7,6 +7,7 @@ import LoginPage from "./components/auth/LoginPage";
 import Callback from "./pages/Callback";
 import Inbox from "./pages/Inbox";
 import EmailPage from "./pages/EmailPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { ToastContainer } from "./components/common/Toast";
 
 const queryClient = new QueryClient({
