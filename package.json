@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "concurrently -n FE,BE -c cyan,green \"pnpm --filter frontend dev\" \"pnpm --filter backend dev\"",
     "dev:ml": "cd ml-service && uvicorn app.main:app --reload --port 8000",
+    "build": "pnpm --filter frontend build",
     "build:all": "pnpm --filter frontend build && pnpm --filter backend build"
   },
   "devDependencies": {
