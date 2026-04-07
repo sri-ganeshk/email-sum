@@ -1,6 +1,6 @@
 import express from "express";
-import app from "../backend/src/app";
-import { connectDB } from "../backend/src/db/mongoose";
+import app from "../../backend/src/app";
+import { connectDB } from "../../backend/src/db/mongoose";
 
 // One promise per cold start — warm requests reuse the existing connection
 const dbReady = connectDB();
