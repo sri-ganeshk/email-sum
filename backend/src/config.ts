@@ -11,8 +11,8 @@ const envSchema = z.object({
   GOOGLE_REDIRECT_URI: z.string().url("GOOGLE_REDIRECT_URI must be a valid URL"),
   SESSION_SECRET: z.string().min(32, "SESSION_SECRET must be at least 32 characters"),
   FRONTEND_URL: z.string().url("FRONTEND_URL must be a valid URL"),
-  GEMINI_API_KEY: z.string().min(1, "GEMINI_API_KEY is required"),
-  GEMINI_MODEL: z.string().default("gemini-2.5-flash"),
+  HF_API_TOKEN: z.string().min(1, "HF_API_TOKEN is required"),
+  HF_API_URL: z.string().url("HF_API_URL must be a valid URL"),
   MONGODB_URI: z.string().default("mongodb://localhost:27017"),
 });
 
