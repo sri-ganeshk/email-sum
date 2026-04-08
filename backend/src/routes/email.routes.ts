@@ -2,7 +2,7 @@ import { Router, Response } from "express";
 import { requireAuth, AuthenticatedRequest } from "../middleware/auth";
 import { aiProcessLimiter } from "../middleware/rateLimit";
 import { gmailService } from "../services/gmail.service";
-import { processEmail } from "../services/gemini.service";
+import { processEmail } from "../services/huggingface.service";
 
 const router = Router();
 
