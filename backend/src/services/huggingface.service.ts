@@ -53,11 +53,17 @@ export async function processEmail(req: ProcessEmailRequest): Promise<AIResult> 
   } else if (typeof raw === "string") {
     text = raw;
   } else {
-    text = JSON.stringify(raw);
+    throw new Error(`Unexpected HuggingFace API response format: ${JSON.stringify(raw).slice(0, 200)}`);
   }
 
   text = text.replace(/```json\n?|\n?```/g, "").trim();
-  const parsed = JSON.parse(text);
+
+  let parsed: { summary?: string; events?: ExtractedEvent[] };
+  try {
+    parsed = JSON.parse(text);
+  } catch {
+    throw new Error(`Failed to parse HuggingFace API response as JSON: ${text.slice(0, 200)}`);
+  }
 
   return {
     emailId: req.email_id,
